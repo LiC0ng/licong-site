@@ -20,10 +20,19 @@ module.exports = {
   /*
   ** Build configuration
   */
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
+  plugins: [
+    // ssr: true表示这个插件只在服务端起作用
+    {src: '~/plugins/ElementUI', ssr: true }
+  ],
   build: {
     /*
     ** Run ESLint on save
     */
+    // 防止element-ui被多次打包
+    vendor: ['element-ui'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
