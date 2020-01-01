@@ -31,8 +31,9 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    // 防止element-ui被多次打包
+    // 防止多次打包
     vendor: ['element-ui'],
+    vendor: ['axios'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
