@@ -20,3 +20,9 @@
     name: 'SidebarItems',
   }
 </script>
+
+<style>
+  .el-menu-item {
+    padding-right: 30px !important;
+  }
+</style>

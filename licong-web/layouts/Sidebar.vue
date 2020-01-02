@@ -5,7 +5,7 @@
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#fff"
+      background-color="#f5f5f5"
       text-color="#000"
       active-text-color="#fff">
       <avator></avator>
