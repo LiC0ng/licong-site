@@ -5,7 +5,9 @@
         <sidebar></sidebar>
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <Topbar></Topbar>
+        </el-header>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
@@ -22,11 +24,12 @@
     height: 100%;
   }
 
-  .el-header, .el-footer {
-   background-color: #B3C0D1;
-   color: #333;
-   text-align: center;
-   line-height: 60px;
+  .el-header {
+    display: block;
+    background-color: #2c2c2c;
+    height: 10%;
+    width: 100%;
+    text-align: center;
   }
 
   .el-aside {
@@ -41,6 +44,7 @@
     color: #333;
     text-align: center;
     line-height: 160px;
+    height: 90%;
   }
 
   .el-container {
@@ -49,7 +53,9 @@
 </style>
 <script>
   import Sidebar from "./Sidebar";
+  import Topbar from "./Topbar"
+
   export default {
-    components: {Sidebar}
+    components: {Sidebar, Topbar}
   }
 </script>
