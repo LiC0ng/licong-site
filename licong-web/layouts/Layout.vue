@@ -1,7 +1,9 @@
 <template>
   <div class="app-wapper">
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside width="140px">
+        <sidebar></sidebar>
+      </el-aside>
       <el-container>
         <el-header>Header</el-header>
         <el-main>Main</el-main>
@@ -42,7 +44,12 @@
   }
 
   .el-container {
-    margin-bottom: 40px;
     height: 100%;
   }
 </style>
+<script>
+  import Sidebar from "./Sidebar";
+  export default {
+    components: {Sidebar}
+  }
+</script>
