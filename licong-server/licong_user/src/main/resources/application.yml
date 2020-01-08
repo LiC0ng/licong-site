@@ -1,0 +1,23 @@
+server: 
+  port: 9005
+spring: 
+  application:  
+    name: licong-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url:
+    username:
+    password:
+  jpa: 
+    database: MySQL
+    show-sql: true
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer‐ip‐address: true
+jwt:
+  config:
+    key:
+    ttl: 2592000000
