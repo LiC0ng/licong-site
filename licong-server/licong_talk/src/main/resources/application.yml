@@ -1,0 +1,20 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: licong-talk #指定服务名
+  data:
+    mongodb:
+      host:
+      database: talkdb
+      port:
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer‐ip‐address: true
+jwt:
+  config:
+    key:
+    ttl: 360000
