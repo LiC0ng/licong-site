@@ -1,0 +1,14 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: licong-search
+  data:
+    elasticsearch:
+      cluster-nodes:
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer‐ip‐address: true
