@@ -21,11 +21,13 @@ module.exports = {
   ** Build configuration
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'mavon-editor/dist/css/index.css'
   ],
   plugins: [
     // ssr: true表示这个插件只在服务端起作用
-    {src: '~/plugins/ElementUI', ssr: true }
+    {src: '~/plugins/ElementUI', ssr: true },
+    {src: '~/plugins/mavon-editor', ssr: false}
   ],
   build: {
     /*
