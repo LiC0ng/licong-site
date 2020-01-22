@@ -1,0 +1,57 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: licong-web
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+jwt:
+  config:
+    key:
+zuul:
+  max:
+    host:
+      connections: 2000
+  host:
+    socket-timeout-millis: 1000000
+    connect-timeout-millis: 1000000
+
+  routes:
+    licong-note:
+      path: /note/**
+      serviceId: licong-note
+    licong-label:
+      path: /label/**
+      serviceId: licong-label
+    licong-search:
+      path: /search/**
+      serviceId: licong-search
+    licong-talk:
+      path: /talk/**
+      serviceId: licong-talk
+    licong-user:
+      path: /user/**
+      serviceId: licong-user
+    licong-memo:
+      path: /memo/**
+      serviceId: licong-memo
+    licong-password:
+      path: /password/**
+      serviceId: licong-password
+    licong-upload:
+      path: /upload/**
+      serviceId: licong-upload
+  ribbon:
+    ReadTimeout: 600000
+    ConnectTimeout: 600000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 500000
