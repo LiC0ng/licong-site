@@ -9,7 +9,16 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>licong_common</module>
-        <module>licong_base</module>
+        <module>licong_label</module>
+        <module>licong_note</module>
+        <module>licong_talk</module>
+        <module>licong_search</module>
+        <module>licong_user</module>
+        <module>licong_eureka</module>
+        <module>licong_memo</module>
+        <module>licong_web</module>
+        <module>licong-password</module>
+        <module>licong-upload</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,6 +37,18 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
