@@ -40,7 +40,6 @@ public class WebFilter extends ZuulFilter {
         //判断是否有头信息
         if (header != null && !"".equals(header)) {
             //把头信息继续向下传
-            System.out.println(header);
             requestContext.addZuulRequestHeader("Authorization", header);
         }
         return null;
