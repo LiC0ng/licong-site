@@ -68,8 +68,6 @@
           if (begin >= 0 && begin + 20 <= content.length) {
             result = result + this.computeTitle(content.slice(begin, begin + 20)) + "...";
             content = content.slice(begin + 21, content.length);
-            console.log(result);
-            console.log(content);
             if (result.length > 300) {
               return result + "...";
             }
