@@ -4,7 +4,7 @@
       <router-link tag="li" to="/"><a>首页</a></router-link>
       <router-link tag="li" to="/note"><a>笔记</a></router-link>
       <router-link tag="li" to="/talk"><a>留言板</a></router-link>
-      <router-link tag="li" to="/agmob"><a>AgMob</a></router-link>
+      <router-link tag="li" to="/aboutAgmob"><a>AgMob</a></router-link>
       <router-link tag="li" to="/aboutme"><a>关于我</a></router-link>
     </ul>
     <form class="sui-form" @keyup.enter="search">
