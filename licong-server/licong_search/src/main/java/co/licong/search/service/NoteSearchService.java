@@ -28,4 +28,8 @@ public class NoteSearchService {
         Pageable pageable = PageRequest.of(page - 1, size);
         return noteDao.findByTitleOrContentLike(key, key, pageable);
     }
+
+    public void deleteById(String id) {
+        noteDao.deleteById(id);
+    }
 }
