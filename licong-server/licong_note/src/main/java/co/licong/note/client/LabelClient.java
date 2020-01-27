@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface LabelClient {
 
     @RequestMapping(value = "/label/incount/{id}", method = RequestMethod.PUT)
-    public Result increaseCount(@PathVariable String id);
+    public Result increaseCount(@PathVariable(value = "id") String id);
 
     @RequestMapping(value = "/label/decount/{id}", method = RequestMethod.PUT)
-    public Result decreaseCount(@PathVariable String id);
+    public Result decreaseCount(@PathVariable(value = "id") String id);
 }

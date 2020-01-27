@@ -12,5 +12,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface UploadClient {
 
     @RequestMapping(value = "/image/{id}", method = RequestMethod.DELETE)
-    public Result deleteImageById(@PathVariable String id);
+    public Result deleteImageById(@PathVariable(value = "id") String id);
 }
