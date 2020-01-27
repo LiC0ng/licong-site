@@ -9,4 +9,6 @@ public interface NoteDao extends ElasticsearchCrudRepository<Note,String> {
 
     Page<Note> findByTitleOrContentLike(String title, String content, Pageable pageable);
 
+    void deleteById(String id);
+
 }

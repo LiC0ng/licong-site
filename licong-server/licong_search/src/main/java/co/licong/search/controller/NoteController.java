@@ -7,13 +7,7 @@ import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
@@ -33,6 +27,13 @@ public class NoteController {
     public Result findByKey(@PathVariable String key, @PathVariable int page, @PathVariable int size) {
         Page<Note> pageData = noteSearchService.findByKey(key, page, size);
         return new Result(true, StatusCode.OK, "查询成功", new PageResult<Note>(pageData.getTotalElements(), pageData.getContent()));
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public Result deleteById(@PathVariable String id) {
+        noteSearchService.deleteById(id);
+        return new Result(true, StatusCode.OK, "删除成功");
+
     }
 
 }

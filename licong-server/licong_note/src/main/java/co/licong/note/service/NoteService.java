@@ -1,6 +1,7 @@
 package co.licong.note.service;
 
 import co.licong.note.client.LabelClient;
+import co.licong.note.client.SearchClient;
 import co.licong.note.client.UploadClient;
 import co.licong.note.dao.NoteDao;
 import co.licong.note.dao.ReplyDao;
@@ -49,6 +50,9 @@ public class NoteService {
 
     @Resource
     private UploadClient uploadClient;
+
+    @Resource
+    private SearchClient searchClient;
 
     /**
      * 查询全部笔记列表
@@ -126,6 +130,7 @@ public class NoteService {
         noteDao.deleteByIdAndUserid(id, userid);
         replyDao.deleteByNoteid(id);
         uploadClient.deleteImageById(id);
+        searchClient.deleteById(id);
     }
 
     /**
