@@ -56,6 +56,7 @@
           labelApi.getRootLabels().then(res => {
             this.labels = res.data.data;
           });
+          this.items = [];
         } else {
           labelApi.getLabelList(id).then(res => {
             this.labels = res.data.data;
