@@ -11,7 +11,7 @@
           <i class="el-icon-back" @click="backOne"></i>
         </el-tooltip>
         <span slot="title" class="menu-bar-title">列表</span>
-        <router-link to="/note/new">
+        <router-link v-if="isLogin" to="/note/new">
           <el-tooltip content="新建笔记" placement="right-start">
             <i class="el-icon-circle-plus-outline"></i>
           </el-tooltip>
